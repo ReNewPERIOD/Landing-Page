@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Make Dream Landing Page</title>
+  <!-- Tailwind CSS và font Inter -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+    .text-primary {
+      color: #3b82f6; /* Tailwind's blue-500 */
+    }
+    .text-secondary {
+      color: #10b981; /* Tailwind's emerald-500 */
+    }
+    .hover-scale {
+      transition: transform 0.3s ease-in-out;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+    .card {
+      @apply bg-[#161b22] border border-[#30363d] rounded-2xl shadow-lg transition-all duration-300 hover:border-[#3b82f6];
+    }
+    .gradient-text {
+      background-image: linear-gradient(to right, #3b82f6, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-primary {
+      @apply bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 hover:bg-blue-700 hover-scale;
+    }
+    .btn-secondary {
+      @apply bg-transparent text-white font-semibold py-3 px-8 rounded-full border-2 border-white transition duration-300 hover:bg-white hover:text-black hover-scale;
+    }
+    .icon {
+      /* Placeholder for icons */
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-color: #3b82f6;
+      mask: url(https://api.iconify.design/ic:baseline-star.svg) no-repeat center;
+      -webkit-mask: url(https://api.iconify.design/ic:baseline-star.svg) no-repeat center;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between p-4 md:px-8 bg-[#161b22] border-b border-[#30363d] shadow-lg">
+    <div class="flex items-center space-x-4">
+      <button onclick="alert('Demo Z-Bot!')" class="text-white py-2 px-4 rounded-full bg-blue-600 hover:bg-blue-700 transition duration-300 text-sm md:text-base">Demo Z-Bot</button>
+    </div>
+    <div class="flex-1 text-center">
+      <h1 class="text-3xl font-bold gradient-text">Make Dream</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      <button onclick="alert('Cảm ơn bạn đã ủng hộ Make Dream Team!')" class="text-white py-2 px-4 rounded-full bg-green-600 hover:bg-green-700 transition duration-300 text-sm md:text-base">Ủng hộ dự án</button>
+    </div>
+  </header>
+
+  <main class="container mx-auto p-4 md:p-8">
+
+    <!-- Hero Section -->
+    <section class="text-center my-16 md:my-24">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight gradient-text mb-4 animate-fadeInDown">
+        Z-BOT: Vượt Qua Cảm Tính, Biến Ước Mơ Thành Hiện Thực
+      </h2>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+        Câu chuyện của một founder 39 tuổi, từ thua lỗ nặng nề đến thành công nhờ sự kết hợp giữa ý chí và sức mạnh AI, là minh chứng cho sứ mệnh của chúng tôi: **Make Dream - Vì giấc mơ không chỉ dành cho riêng ai.**
+      </p>
+      <div class="flex justify-center space-x-4">
+        <!-- [ĐÃ CẬP NHẬT] Nút "Bắt đầu ngay" điều hướng tới trang frontend -->
+        <a href="/app" class="btn-primary">Bắt đầu ngay</a>
+        <!-- [ĐÃ CẬP NHẬT] Nút "Tìm hiểu thêm" điều hướng tới phần Features -->
+        <a href="#features" class="btn-secondary">Tìm hiểu thêm</a>
+      </div>
+    </section>
+
+    <!-- Video Trailer Section -->
+    <section class="my-16 md:my-24">
+      <h3 class="text-3xl font-bold text-center text-primary mb-8">Video Giới Thiệu</h3>
+      <div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-2xl shadow-xl">
+        <iframe width="100%" height="auto" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/PSBk9Iu6HqQ?autoplay=1&mute=1&rel=0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- [ĐÃ CẬP NHẬT] Phần Features với ID để điều hướng -->
+    <section id="features" class="my-16 md:my-24">
+      <h3 class="text-3xl font-bold text-center text-primary mb-8">Sức Mạnh Của Z-BOT</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Tính năng 1 -->
+        <div class="card p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm-2 11a1 1 0 11-2 0 1 1 0 012 0zm5-2a1 1 0 100-2 1 1 0 000 2zM5.5 8.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Phân tích không cảm tính</h4>
+          <p class="text-gray-400 text-sm">
+            AI phân tích thị trường 24/7, loại bỏ hoàn toàn cảm xúc và đưa ra quyết định dựa trên dữ liệu.
+          </p>
+        </div>
+        <!-- Tính năng 2 -->
+        <div class="card p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Kỷ luật và Nhất quán</h4>
+          <p class="text-gray-400 text-sm">
+            Thực thi chiến lược tự động, đảm bảo sự nhất quán và kỷ luật trong mọi giao dịch, ngay cả khi thị trường biến động.
+          </p>
+        </div>
+        <!-- Tính năng 3 -->
+        <div class="card p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9 12a1 1 0 11-2 0 1 1 0 012 0z" />
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Học hỏi liên tục</h4>
+          <p class="text-gray-400 text-sm">
+            Sử dụng Machine Learning để liên tục cải thiện và thích nghi với thị trường tiền ảo đầy khắc nghiệt.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Roadmap Section -->
+    <section class="my-16 md:my-24">
+      <h3 class="text-3xl font-bold text-center text-primary mb-8">Lộ Trình Phát Triển</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card p-6">
+          <h4 class="text-xl font-bold text-secondary mb-4">✅ Đã hoàn thành</h4>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Xây dựng Z-Bot v0.2: Auto trade + AI scoring</li>
+            <li>Kết nối API Binance + Dashboard theo dõi lệnh</li>
+            <li>Chấm điểm coin bằng AI Rule-based + giao diện quản lý</li>
+            <li>Hoàn thiện MVP, test trên tài khoản thật</li>
+            <li>Landing Page + Video giới thiệu dự án</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <h4 class="text-xl font-bold text-secondary mb-4">🚀 Sắp triển khai</h4>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Z-Bot v0.3: DCA thông minh + học hỏi liên tục</li>
+            <li>Chuyển lợi nhuận về Earn để bảo toàn vốn</li>
+            <li>ML + dữ liệu ngoài cải tiến AI scoring</li>
+            <li>Ra mắt bản Public Test Demo + tài liệu hướng dẫn</li>
+            <li>Khởi tạo cộng đồng Make Dream</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- [ĐÃ CẬP NHẬT] Phần Cộng Đồng -->
+    <section class="my-16 md:my-24 card p-8 text-center">
+      <h3 class="text-3xl font-bold text-primary mb-4">Tham gia Cộng đồng Make Dream</h3>
+      <p class="text-gray-300 max-w-2xl mx-auto mb-6">
+        Hãy cùng nhau xây dựng một cộng đồng vững mạnh, nơi chúng ta có thể chia sẻ kiến thức, kinh nghiệm và cùng nhau "Make Dream" trong thị trường tiền ảo.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <!-- [ĐÃ XÓA] Các nút cộng đồng khác -->
+        <a href="https://t.me/your-telegram-group" target="_blank" class="btn-primary bg-blue-600 hover:bg-blue-700">Tham gia Telegram</a>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="my-16 md:my-24 card p-8">
+      <h3 class="text-3xl font-bold text-primary mb-4">Góp Ý & Liên Hệ</h3>
+      <p class="text-gray-300 mb-6">Chúng tôi luôn lắng nghe bạn. Hãy chia sẻ cảm nhận hoặc góp ý cho dự án Make Dream:</p>
+      <div class="space-y-4">
+        <input type="text" placeholder="Tên của bạn (tuỳ chọn)" class="w-full p-3 bg-[#22272e] border border-[#30363d] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <textarea rows="5" placeholder="Nội dung góp ý hoặc lời nhắn..." class="w-full p-3 bg-[#22272e] border border-[#30363d] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button onclick="alert('Cảm ơn bạn đã gửi phản hồi!')" class="w-full bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+          Gửi phản hồi
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#161b22] text-center p-6 border-t border-[#30363d] text-gray-400 text-sm">
+    © 2025 Make Dream Team. All rights reserved.
+  </footer>
+
+  <script>
+    function downloadDemo() {
+      alert("Liên hệ để nhận bản demo Z-Bot.");
+      // window.location.href = 'link-tai-demo.zip';
+    }
+  </script>
+
+</body>
+</html>
